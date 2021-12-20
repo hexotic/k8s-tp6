@@ -1,8 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hostname-101-deployment
+  name: web-nginx
 spec:
+  strategy:
+    type: Recreate
   replicas: 2
   selector:
     matchLabels:
